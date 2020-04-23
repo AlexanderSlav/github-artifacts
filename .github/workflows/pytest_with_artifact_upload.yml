@@ -32,6 +32,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -v
+    - uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: py_test_logs
+        path: logs.txt
 
   artifact_upload:
       runs-on: ubuntu-latest
