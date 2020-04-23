@@ -30,4 +30,4 @@ jobs:
         with:
           name: useful_info
 
-      - run: cat useful_info
+      - run: ls useful_info
