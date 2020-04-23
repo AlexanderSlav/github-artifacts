@@ -1,0 +1,22 @@
+name: Upload artifact
+
+on:
+   push:
+     branches: [tutorial]
+   pull_request:
+     branches: [master]
+
+jobs:
+  code-style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: mkdir -p artifacts
+
+      - run: echo 'PMI best group' > artifacts/the_truth.txt
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: my-artifact
+          path: artifacts
