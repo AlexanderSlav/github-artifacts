@@ -36,7 +36,7 @@ jobs:
         path: flake_logs.txt
     - name: Test with pytest
       run: |
-        pytest -v > logs.txt
+        pytest -v > pytest_logs.txt
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
