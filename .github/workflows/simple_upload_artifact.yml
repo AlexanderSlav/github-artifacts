@@ -28,12 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: check
-        run:
-            ls 
-
       - uses: actions/download-artifact@v1
         with:
           name: useful_info
 
-      - run: ls useful_info
+      - run: ls useful_info/the_truth.txt
