@@ -35,7 +35,7 @@ jobs:
         pip install pytest
         pytest -v > logs.txt
 
-    artifact_upload:
+  artifact_upload:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
           run:
             ls
 
-    artifact_download:
+  artifact_download:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
