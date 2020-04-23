@@ -16,7 +16,7 @@ jobs:
 
       - run: echo 'PMI best group' > artifacts/the_truth.txt
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v1
         with:
           name: useful_info
           path: artifacts
@@ -26,8 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v1
         with:
           name: useful_info
-          
+
       - run: cat useful_info
