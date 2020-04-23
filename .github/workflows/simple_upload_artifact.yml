@@ -20,11 +20,17 @@ jobs:
         with:
           name: useful_info
           path: artifacts
+      - name: check
+        run:
+          ls
 
   artifact_download:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: check
+        run:
+            ls 
 
       - uses: actions/download-artifact@v1
         with:
